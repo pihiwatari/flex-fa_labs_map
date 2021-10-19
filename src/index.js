@@ -2,17 +2,6 @@ import "./styles/styles.css";
 
 const app = document.getElementById("main");
 
-const dynamicText = document.createElement("p");
-dynamicText.innerText = "What's up Dude?";
-dynamicText.classList.add(
-  "transition-opacity",
-  "duration-500",
-  "my-20",
-  "text-center",
-  "text-2xl",
-  "font-bold"
-);
-
 function modifyText(el) {
   const randomText = [
     "What's up Dude?",
@@ -34,6 +23,17 @@ function modifyText(el) {
     el.classList.toggle("opacity-0");
   }, 250);
 }
+
+const dynamicText = document.createElement("p");
+dynamicText.innerText = "What's up Dude?";
+dynamicText.classList.add(
+  "transition-opacity",
+  "duration-500",
+  "my-20",
+  "text-center",
+  "text-2xl",
+  "font-bold"
+);
 
 app.appendChild(dynamicText);
 setInterval(() => {

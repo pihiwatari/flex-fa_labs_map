@@ -44,7 +44,7 @@ export default () => {
       new HTMLInLineCSSWebpackPlugin({
         target: "<!-- Inline CSS Plugin -->",
       }),
-      new HTMLInLineScriptWebpackPlugin([/index\.js$/, /main\.js$/]),
+      new HTMLInLineScriptWebpackPlugin([/.+[.]js$/]),
     ],
     devServer: {
       // contentBase: join(__dirname, "dist"),
