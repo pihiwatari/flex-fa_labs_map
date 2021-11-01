@@ -11,7 +11,7 @@ export default () => {
     output: {
       path: resolve(__dirname, "dist"),
       filename: "main.js",
-      // publicPath: resolve(__dirname, ".src/styles/images/"),
+      publicPath: "",
     },
     resolve: {
       extensions: [".js"],
@@ -62,7 +62,7 @@ export default () => {
       new HTMLInLineCSSWebpackPlugin({
         target: "<!-- Inline CSS Plugin -->",
       }),
-      new HTMLInLineScriptWebpackPlugin([/index\.js$/, /main\.js$/]),
+      // new HTMLInLineScriptWebpackPlugin([/index\.js$/, /main\.js$/]),
     ],
     devServer: {
       // contentBase: join(__dirname, "dist"),

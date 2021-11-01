@@ -1,4 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Flex Additive - New project</title><script defer="defer">(()=>{"use strict";var t=document.getElementById("main"),e=document.createElement("p");e.innerText="What's up Dude?",e.classList.add("transition-opacity","duration-500","my-20","text-center","text-2xl","font-bold"),t.appendChild(e),setInterval((function(){var t,n,o;t=e,n=["What's up Dude?","Nothing to do, eh?","Why even bothering?","Wait! I've got nothing to say...","Mama!!! I need some help over here!!!"],o=Math.floor(Math.random()*n.length),t.classList.toggle("opacity-0"),setTimeout((function(){t.innerText=n[o],t.classList.toggle("opacity-0")}),250)}),3e3)})();</script><style type="text/css">/*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com */
+<!doctype html><html lang="en"><head><!--[if IE
+      ]><link rel="shortcut icon" href="path/to/favicon.ico"
+    /><![endif]--><link rel="icon" href="./favicon.png"/><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Flex Additive - AM New Project</title><script defer="defer">(()=>{"use strict";var e=document.querySelector("#menu-icon"),t=document.querySelector("#navbar");e.addEventListener("click",(function(){t.classList.toggle("hidden")}))})();</script><style type="text/css">/*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -526,9 +528,45 @@ video {
  * Ensure the default browser behavior of the `hidden` attribute.
  */
 
+[hidden] {
+  display: none;
+}
+
 *, ::before, ::after {
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .mx-2 {
@@ -536,14 +574,14 @@ video {
   margin-right: 0.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.my-20 {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
 
 .flex {
@@ -554,12 +592,40 @@ video {
   display: table;
 }
 
+.hidden {
+  display: none;
+}
+
+.h-0 {
+  height: 0px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
 .h-16 {
   height: 4rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
+.h-0\.5 {
+  height: 0.125rem;
+}
+
 .h-full {
   height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-40 {
@@ -568,14 +634,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
-
-.flex-shrink {
-  flex-shrink: 1;
 }
 
 @-webkit-keyframes spin {
@@ -644,12 +702,20 @@ video {
   }
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .rounded {
@@ -661,23 +727,26 @@ video {
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
+.bg-gray-400 {
   --tw-bg-opacity: 1;
-  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+  background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-700:hover {
+.bg-gray-700 {
   --tw-bg-opacity: 1;
-  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-3 {
   padding: 0.75rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-4 {
@@ -685,8 +754,17 @@ video {
   padding-right: 1rem;
 }
 
+.pl-16 {
+  padding-left: 4rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .text-sm {
@@ -694,14 +772,13 @@ video {
   line-height: 1.25rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.font-light {
+  font-weight: 300;
 }
 
 .font-bold {
@@ -713,8 +790,9 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-.opacity-0 {
-  opacity: 0;
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgba(31, 41, 55, var(--tw-text-opacity));
 }
 
 *, ::before, ::after {
@@ -735,27 +813,114 @@ video {
   --tw-ring-shadow: 0 0 #0000;
 }
 
-.transition-opacity {
-  transition-property: opacity;
+body {
+  font-family: "Century Gothic", sans-serif;
+}
+
+.pancake {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.link-button {
+  display: inline-block;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.link-button:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+}
+
+.link-button {
+  border-radius: 0.375rem;
+}
+
+.link-button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+.link-button {
+  padding: 0.75rem;
+}
+
+.link-button:hover {
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
+.link-button {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
+.button {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-body {
-  font-family: "Century Gothic", sans-serif;
+.button:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+}
+
+.button {
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(37, 99, 235, var(--tw-bg-opacity));
+}
+
+.button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
+}
+
+.button {
+  padding: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @media (min-width: 640px) {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:static {
+    position: static;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -764,4 +929,4 @@ body {
 @media (min-width: 1536px) {
 }
 
-</style></head><body class="bg-gray-200"><header class="flex justify-between items-center h-16 px-4 shadow"><figure class="flex-shrink"><a href="https://flextronics365.sharepoint.com/sites/additivemanufacturing"><img class="w-40" src="https://flex.com/-/media/Project/Flex/BrandSite/logos/flex_logo_2019.png?revision=6f61b59c-34cf-4dc7-b853-b8f8e85f45a5" alt="Flex logo"/></a></figure><nav class="h-full flex-shrink-0"><ul class="flex justify-between items-center h-full text-sm"><li class="mx-2"><a href="https://flextronics365.sharepoint.com/sites/additivemanufacturing" target="blank" class="px-3 font-bold">Flex Additive Homepage</a></li><li><a href="https://flextronics365.sharepoint.com/sites/additivemanufacturing/AM%20Instant%20Quoting%20Tool%20Page/index.aspx" target="blank" class="p-3 rounded text-white bg-blue-500 hover:bg-blue-700">Request a quote</a></li></ul></nav></header><main id="main"><h1 class="w-full my-10 text-center text-6xl font-bold">Flex Additive Starter.</h1><p class="text-center">Use this starter template to initiate any project for the Flex Additive team</p></main></body></html>
+</style></head><body class="min-h-screen bg-gray-200 text-gray-800 pancake"><header class="relative flex justify-between items-center w-full h-16 px-4 shadow"><figure class="w-40 mx-auto md:mx-0 p-6"><a href="https://flextronics365.sharepoint.com/sites/additivemanufacturing"><img class="w-full" src="./images/Flex_logo15.png" alt="Flex logo"/></a></figure><nav id="navbar" class="hidden absolute lg:static top-16 right-0 left-0 z-10 bg-gray-200"><ul class="flex flex-col lg:flex-row justify-between items-center h-full text-sm"><li class="mx-2"><a href="https://flextronics365.sharepoint.com/sites/additivemanufacturing" target="blank" class="link-button">Flex Additive Homepage</a></li><li class="mx-2"><a href="https://apps.powerapps.com/play/daa6a785-3ff2-4779-8743-520fecd48ea4?tenantId=3f0e69e0-eb38-4eb2-b4ee-52919719d31e?l=en-us" target="blank" class="link-button">Digital Catalog</a></li><li class="mx-2"><a href="https://flextronics365.sharepoint.com/sites/additivemanufacturing/AM%20Competency%20Centers%20Map/index.aspx" target="blank" class="link-button">Competency Centers</a></li><li class="mx-2"><a href="https://apps.powerapps.com/play/20f03394-db49-43e2-ad36-5768cd94cef4?tenantId=3f0e69e0-eb38-4eb2-b4ee-52919719d31e" target="blank" class="link-button">Design Request Form</a></li><li class="mx-2"><a href="https://flextronics365.sharepoint.com/sites/additivemanufacturing/AM%20Break%20Even%20Tool/index.aspx" target="blank" class="link-button">Break-even Tool</a></li></ul></nav><div id="menu-icon" class="absolute top-3 right-5 lg:hidden flex flex-col justify-around h-10 w-10 p-2"><div class="h-0.5 w-full bg-gray-700"></div><div class="h-0.5 w-full bg-gray-700"></div><div class="h-0.5 w-full bg-gray-700"></div></div></header><main id="main"><h1 class="w-full my-10 text-center text-4xl font-bold">Flex Additive Starter</h1><p class="text-center">Use this starter template to initiate any project for the Flex Additive team</p><section>This is an empty section</section></main><footer class="flex items-center h-20 bg-gray-700 pl-16"><p class="text-white font-light text-xs">Powered by AME | Developed by <a href="mailto: elias.rayas@flex.com">Elias.Rayas@flex.com</a></p></footer></body></html>

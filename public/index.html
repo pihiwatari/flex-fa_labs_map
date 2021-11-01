@@ -11,19 +11,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="../src/styles/styles.css" /> -->
-    <title>Flex Additive - Instant Quoting Tool</title>
+    <title>Flex Additive - AM New Project</title>
   </head>
-  <body class="min-h-screen bg-gray-200 text-gray-800 pancake">
+  <body class="relative min-h-screen bg-gray-200 text-gray-800 pancake">
     <header class="flex justify-between items-center w-full h-16 px-4 shadow">
-      <figure class="w-40 mx-auto md:mx-0 p-6">
+      <figure class="w-40 p-6">
         <a
           href="https://flextronics365.sharepoint.com/sites/additivemanufacturing"
         >
           <img class="w-full" src="./images/Flex_logo15.png" alt="Flex logo" />
         </a>
       </figure>
-      <nav class="hidden sm:block h-full">
-        <ul class="flex justify-between items-center h-full text-sm">
+      <nav
+        id="navbar"
+        class="
+          hidden
+          lg:block
+          absolute
+          lg:static
+          inset-0
+          z-10
+          bg-gray-200
+          opacity-95
+        "
+      >
+        <ul
+          class="
+            flex flex-col
+            lg:flex-row lg:justify-between
+            items-center
+            h-full
+            mt-16
+            lg:mt-0
+            text-sm
+            lg:text-xs
+          "
+        >
           <li class="mx-2">
             <a
               href="https://flextronics365.sharepoint.com/sites/additivemanufacturing"
@@ -65,13 +88,31 @@
             >
           </li>
           <!-- Instant quote button -->
-          <!-- <li>
-            <a target="blank" class="p-3 rounded text-white bg-gray-400"
-              >Request a quote</a
-            >
-          </li> -->
+          <li>
+            <a href="#" target="blank" class="button">Request a quote</a>
+          </li>
         </ul>
       </nav>
+      <!-- Hamburger icon -->
+      <div
+        id="menu-icon"
+        class="
+          absolute
+          top-3
+          right-5
+          z-10
+          lg:hidden
+          flex flex-col
+          justify-around
+          h-10
+          w-10
+          p-2
+        "
+      >
+        <div class="h-0.5 w-full bg-gray-700"></div>
+        <div class="h-0.5 w-full bg-gray-700"></div>
+        <div class="h-0.5 w-full bg-gray-700"></div>
+      </div>
     </header>
     <!-- main section, add content here -->
     <main id="main">
@@ -82,10 +123,20 @@
         Use this starter template to initiate any project for the Flex Additive
         team
       </p>
-      <!-- need help section -->
-      <section>This is an empty section</section>
+      <!-- Empty section, you can delete or modify this -->
+      <section class="mt-10 text-center">This is an empty section</section>
     </main>
-    <footer class="flex items-center h-20 bg-gray-700 pl-16">
+    <footer
+      class="
+        flex
+        items-center
+        h-20
+        lg:pl-16
+        text-center
+        lg:text-left
+        bg-gray-700
+      "
+    >
       <p class="text-white font-light text-xs">
         Powered by AME | Developed by
         <a href="mailto: elias.rayas@flex.com">Elias.Rayas@flex.com</a>
