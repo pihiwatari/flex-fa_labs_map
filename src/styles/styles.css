@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body,
+.leaflet-container {
   font-family: "Century Gothic", sans-serif;
 }
 
@@ -11,10 +12,23 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
+.pancake-2 {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
 .link-button {
   @apply inline-block p-3 rounded-md transform-gpu transition-all hover:bg-blue-500 hover:text-gray-100 hover:scale-105;
 }
 
 .button {
   @apply p-3 rounded-md text-gray-100 bg-blue-600 transform-gpu transition-all hover:bg-blue-700  hover:scale-105;
+}
+
+.leaflet-popup-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.leaflet-popup-content p {
+  margin: 0;
 }
