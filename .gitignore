@@ -1,3 +1,5 @@
+# Use: git rm -r --cached dist
+
 node_modules/
 
 dist/
